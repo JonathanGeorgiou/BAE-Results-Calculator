@@ -20,14 +20,14 @@ public class Results {
 		System.out.println("Chemistry percentage: " + chemPercentage + "%");
 		System.out.println("Biology percentage: " + bioPercentage + "%");
 		System.out.println("Total percentage: " + totalPercentage + "%");
-		if (physPercentage < 60) {
-			System.out.println("I'm sorry, you have failed physics.");
-		} else if (chemPercentage < 60) {
-			System.out.println("I'm sorry, you have failed chemistry.");
-		} else if (bioPercentage < 60) {
-			System.out.println("I'm sorry, you have failed biology.");
-		} else if (totalPercentage < 60) {
-			System.out.println("I'm sorry, you have failed everything.");
+		if (physPercentage < 60 || bioPercentage < 60 || chemPercentage < 60) {
+			System.out.println("I'm sorry, you have failed the following:");
+		} if (physPercentage < 60) {
+			System.out.println("- physics.");
+		} if (chemPercentage < 60) {
+			System.out.println("- chemistry.");
+		} if (bioPercentage < 60) {
+			System.out.println("- biology.");
 		}
 
 	}
